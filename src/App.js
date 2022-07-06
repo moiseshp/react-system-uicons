@@ -1,8 +1,10 @@
-import Button from './dist/Button'
+import Button from './dist/Button';
 
 function App() {
   return (
-    <div><Button /></div>
+    <div>
+      <Button />
+    </div>
   );
 }
 
