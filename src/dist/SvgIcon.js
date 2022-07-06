@@ -7,7 +7,7 @@ const SVG = {
   viewBox: '0 0 21 21',
 };
 
-const Icon = ({ children, color, size }) => {
+const SvgIcon = ({ children, color, size }) => {
   const theme = useIconTheme();
   return (
     <svg
@@ -22,11 +22,11 @@ const Icon = ({ children, color, size }) => {
   );
 };
 
-Icon.defaultProps = {};
+SvgIcon.defaultProps = {};
 
-Icon.propTypes = {
+SvgIcon.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-export default Icon;
+export default SvgIcon;

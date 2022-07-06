@@ -1,9 +1,9 @@
 import React from 'react';
-import Icon from './Icon';
+import SvgIcon from './SvgIcon';
 
 const Create = ({ ...rest }) => {
   return (
-    <Icon {...rest}>
+    <SvgIcon {...rest}>
       <g
         fill="none"
         fillRule="evenodd"
@@ -16,7 +16,7 @@ const Create = ({ ...rest }) => {
         <path d="m14.5.46667982c.5549155.5734054.5474396 1.48588056-.0167966 2.05011677l-6.9832034 6.98320341-3 1 1-3 6.9874295-7.04563515c.5136195-.5178979 1.3296676-.55351813 1.8848509-.1045243z" />
         <path d="m12.5 2.5.953 1" />
       </g>
-    </Icon>
+    </SvgIcon>
   );
 };
 
