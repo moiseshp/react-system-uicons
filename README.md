@@ -13,14 +13,14 @@ npm install --save react-system-uicons
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'react-system-uicons'
-import 'react-system-uicons/dist/index.css'
+import MyComponent from 'react-system-uicons';
+import 'react-system-uicons/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```
@@ -28,7 +28,16 @@ class Example extends Component {
 ## License
 
 ## Links
+
 https://fathomtech.io/blog/create-a-react-component-library-using-create-react-app/
 https://medium.com/hackernoon/creating-a-library-of-react-components-using-create-react-app-without-ejecting-d182df690c6b
+
+##
+
+- Provider theme
+- Add classname globals para estilos vía css (module)
+- Docu de instalación:
+  - Styled Component
+  - Con css modules o similar
 
 MIT © [moiseshp](https://github.com/moiseshp)
