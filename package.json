@@ -1,6 +1,6 @@
 {
-  "name": "react-system-uicons",
-  "version": "0.0.1",
+  "name": "@moiseshp/react-system-uicons",
+  "version": "0.0.2",
   "description": "System UIcons to ReactJS",
   "author": "moiseshp",
   "license": "MIT",
