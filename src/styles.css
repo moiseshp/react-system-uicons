@@ -1,0 +1,12 @@
+.WrapperStyles svg.SystemUIcons {
+  color: #f0f;
+}
+
+.WrapperStyles svg.SystemUIcons.small {
+  width: 40px;
+  height: 40px;
+}
+
+.WrapperStyles svg.SystemUIcons.primary {
+  color: #0f0;
+}

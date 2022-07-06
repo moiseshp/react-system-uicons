@@ -15,6 +15,7 @@ const SvgIcon = ({ children, color, size }) => {
       viewBox={SVG.viewBox}
       width={size ?? theme.size}
       height={size ?? theme.size}
+      className={`${theme.className} ${color || ''} ${size || ''}`}
       color={theme.pallete[color] || color || theme.pallete.currentColor}
     >
       {children}

@@ -35,6 +35,7 @@ https://medium.com/hackernoon/creating-a-library-of-react-components-using-creat
 ##
 
 - Provider theme
+- Add icon size standard: small, medium, large
 - Add classname globals para estilos vía css (module)
 - Docu de instalación:
   - Styled Component

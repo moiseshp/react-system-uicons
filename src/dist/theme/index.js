@@ -1,5 +1,6 @@
 const theme = {
   size: 21,
+  className: 'SystemUIcons',
   pallete: {
     currentColor: 'currentColor',
     primary: '#f00',
@@ -13,6 +14,7 @@ const theme = {
 
 export const mergeTheme = (customTheme) => ({
   size: customTheme?.size || theme.size,
+  className: customTheme?.className || theme.className,
   pallete: customTheme?.pallete
     ? {
         ...theme.pallete,
