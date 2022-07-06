@@ -6,15 +6,14 @@ import SystemUIconsProvider from './dist';
 function App() {
   return (
     <div>
-      <Create />
+      <h1>Without Provider</h1>
+      <Create size={60} />
       <Write />
-      <SystemUIconsProvider
-        customTheme={{
-          size: 40,
-        }}
-      >
-        <Create />
-        <Write />
+      <hr />
+      <h1>With Provider</h1>
+      <SystemUIconsProvider theme={{ size: 40, pallete: { secondary: '#0ff' } }}>
+        <Create color="secondary" />
+        <Write color="primary" />
       </SystemUIconsProvider>
     </div>
   );

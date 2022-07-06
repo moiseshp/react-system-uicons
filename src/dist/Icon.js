@@ -1,31 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIcon } from './contexts/IconProvider';
+import { useIconTheme } from './contexts/IconProvider';
 
-const StyledIcon = ({ children }) => {
-  const theme = useIcon();
+const SVG = {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 21 21',
+};
+
+const Icon = ({ children, color, size }) => {
+  const theme = useIconTheme();
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 21 21"
-      width={theme?.size || 20}
-      height={theme?.size || 20}
-      color={theme?.pallete?.primary || 'currentColor'}
+      xmlns={SVG.xmlns}
+      viewBox={SVG.viewBox}
+      width={size ?? theme.size}
+      height={size ?? theme.size}
+      color={theme.pallete[color] || color || theme.pallete.currentColor}
     >
       {children}
     </svg>
   );
 };
 
-const Icon = ({ children }) => {
-  return <StyledIcon>{children}</StyledIcon>;
-};
-
 Icon.defaultProps = {};
 
 Icon.propTypes = {
-  size: PropTypes.number,
   color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Icon;
