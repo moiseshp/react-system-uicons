@@ -2,7 +2,7 @@
 
 > System UIcons to ReactJS
 
-[![NPM](https://img.shields.io/npm/v/react-system-uicons.svg)](https://www.npmjs.com/package/react-system-uicons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-system-uicons.svg)](https://www.npmjs.com/package/@moiseshp/react-system-uicons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
