@@ -1,8 +1,13 @@
 import theme from '../theme';
 
 export const mergeTheme = (customTheme) => ({
-  size: customTheme?.size || theme.size,
   className: customTheme?.className || theme.className,
+  size: customTheme?.size
+    ? {
+        ...theme.size,
+        ...customTheme.size,
+      }
+    : theme.size,
   pallete: customTheme?.pallete
     ? {
         ...theme.pallete,
