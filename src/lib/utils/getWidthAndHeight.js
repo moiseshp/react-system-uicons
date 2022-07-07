@@ -1,14 +1,14 @@
 const getNumberFromString = (value) => {
   const number = parseInt(value);
   if (typeof number === 'number' && number >= 0) return Math.abs(number);
-  throw TypeError(`${value} is not contained a number equal to or greather than zero`);
+  throw Error(`${value} is not contained a number equal to or greather than zero`);
 };
 
 const getMeasureUnit = (value, number) => {
   const measureUnitsAllowed = ['%', 'px', 'rem', 'em'];
   const measureUnit = value.replace(number, '');
   if (!measureUnitsAllowed.includes(measureUnit)) {
-    throw TypeError(`${value} is not contained a measure unit valid`);
+    throw Error(`${value} is not contained a measure unit valid`);
   }
   return measureUnit;
 };

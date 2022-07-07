@@ -2,6 +2,7 @@
 /build
 /coverage
 /dist
+/lib
 /node_modules
 /public
 /src

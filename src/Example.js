@@ -1,4 +1,5 @@
-import Create from './dist/Create';
+import React from 'react';
+import Create from './lib/Create';
 // import Write from './dist/Write';
 // import Pen from './dist/Pen';
 // import SystemUIconsProvider from './dist';
