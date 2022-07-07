@@ -1,8 +1,12 @@
 const theme = {
-  size: 21,
+  size: {
+    small: 17,
+    medium: 21,
+    large: 25,
+  },
   className: 'SystemUIcons',
   pallete: {
-    currentColor: 'currentColor',
+    default: 'inherit',
     primary: '#f00',
     secondary: '#0f0',
     error: '#00f',
@@ -11,16 +15,5 @@ const theme = {
     success: '#f0f',
   },
 };
-
-export const mergeTheme = (customTheme) => ({
-  size: customTheme?.size || theme.size,
-  className: customTheme?.className || theme.className,
-  pallete: customTheme?.pallete
-    ? {
-        ...theme.pallete,
-        ...customTheme.pallete,
-      }
-    : theme.pallete,
-});
 
 export default theme;

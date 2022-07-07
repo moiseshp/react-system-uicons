@@ -1,27 +1,29 @@
 import Create from './dist/Create';
-import Write from './dist/Write';
-import Pen from './dist/Pen';
-import SystemUIconsProvider from './dist';
+// import Write from './dist/Write';
+// import Pen from './dist/Pen';
+// import SystemUIconsProvider from './dist';
 import './styles.css';
 
 function App() {
   return (
-    <div>
+    <div style={{ color: '#390' }}>
       <h1>Without Provider</h1>
-      <Create size={60} />
-      <Write color="#345" />
-      <Pen />
+      <Create size="small" />
+      <Create size="medium" />
+      <Create size="large" />
+
+      <Create size={50} />
       <hr />
-      <h1>With Provider</h1>
+      {/* <h1>With Provider</h1>
       <SystemUIconsProvider theme={{ size: 40, pallete: { secondary: '#0ff' } }}>
         <Create color="secondary" />
         <Write color="primary" />
-      </SystemUIconsProvider>
+      </SystemUIconsProvider> */}
 
       <h1>With ClassName</h1>
       <section className="WrapperStyles">
-        <Create size="small" />
-        <Write color="primary" />
+        <Create size="large" />
+        <Create size="small" color="primary" />
       </section>
     </div>
   );

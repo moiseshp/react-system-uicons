@@ -2,11 +2,11 @@
   color: #f0f;
 }
 
-.WrapperStyles svg.SystemUIcons.small {
-  width: 40px;
-  height: 40px;
+.WrapperStyles svg.SystemUIcons.SystemUIcons-small {
+  width: 6.5rem;
+  height: 6.5rem;
 }
 
-.WrapperStyles svg.SystemUIcons.primary {
+.WrapperStyles svg.SystemUIcons.SystemUIcons-primary {
   color: #0f0;
 }

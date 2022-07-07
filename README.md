@@ -32,13 +32,13 @@ class Example extends Component {
 https://fathomtech.io/blog/create-a-react-component-library-using-create-react-app/
 https://medium.com/hackernoon/creating-a-library-of-react-components-using-create-react-app-without-ejecting-d182df690c6b
 
-##
+##TODO
 
-- Provider theme
-- Add icon size standard: small, medium, large
-- Add classname globals para estilos vía css (module)
-- Docu de instalación:
-  - Styled Component
-  - Con css modules o similar
+- Integration with other frameworks: Material UI, Bootstrap, Chakra, Styled Components, etc.
 
-MIT © [moiseshp](https://github.com/moiseshp)
+## Features
+
+- Permite exportar un Provider para controlar configuración personalizada del Icon
+- Type Props
+- Tests
+  MIT © [moiseshp](https://github.com/moiseshp)
