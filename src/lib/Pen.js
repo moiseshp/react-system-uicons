@@ -5,6 +5,7 @@ const Pen = ({ ...rest }) => {
   return (
     <SvgIcon {...rest}>
       <g
+        id="PenIcon"
         fill="none"
         fillRule="evenodd"
         stroke="currentColor"

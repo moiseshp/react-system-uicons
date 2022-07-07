@@ -41,4 +41,6 @@ https://medium.com/hackernoon/creating-a-library-of-react-components-using-creat
 - Permite exportar un Provider para controlar configuración personalizada del Icon
 - Type Props
 - Tests
+- Create your custom icon with wrapper SvgIcon
+
   MIT © [moiseshp](https://github.com/moiseshp)

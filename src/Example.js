@@ -1,5 +1,5 @@
 import React from 'react';
-import Create from './lib/Create';
+import CreateIcon from './lib/Create';
 // import Write from './dist/Write';
 // import Pen from './dist/Pen';
 // import SystemUIconsProvider from './dist';
@@ -9,11 +9,9 @@ function App() {
   return (
     <div style={{ color: '#390' }}>
       <h1>Without Provider</h1>
-      <Create size="small" />
-      <Create size="medium" />
-      <Create size="large" />
-
-      <Create size="10px" />
+      <CreateIcon size="small" />
+      <CreateIcon size="medium" id="World" />
+      <CreateIcon size="large" id="other" />
       {/* <hr />
       <h1>With Provider</h1>
       <SystemUIconsProvider theme={{ size: 40, pallete: { secondary: '#0ff' } }}>

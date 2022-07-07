@@ -5,6 +5,7 @@ const Create = ({ ...rest }) => {
   return (
     <SvgIcon {...rest}>
       <g
+        id="CreateIcon"
         fill="none"
         fillRule="evenodd"
         stroke="currentColor"

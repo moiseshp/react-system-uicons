@@ -5,6 +5,7 @@ const Write = ({ ...rest }) => {
   return (
     <SvgIcon {...rest}>
       <g
+        id="WriteIcon"
         fill="none"
         fillRule="evenodd"
         stroke="currentColor"
