@@ -12,19 +12,19 @@ function App() {
       <Create size="medium" />
       <Create size="large" />
 
-      <Create size={50} />
-      <hr />
-      {/* <h1>With Provider</h1>
+      <Create size="10px" />
+      {/* <hr />
+      <h1>With Provider</h1>
       <SystemUIconsProvider theme={{ size: 40, pallete: { secondary: '#0ff' } }}>
         <Create color="secondary" />
         <Write color="primary" />
-      </SystemUIconsProvider> */}
+      </SystemUIconsProvider>
 
       <h1>With ClassName</h1>
       <section className="WrapperStyles">
         <Create size="large" />
         <Create size="small" color="primary" />
-      </section>
+      </section> */}
     </div>
   );
 }
