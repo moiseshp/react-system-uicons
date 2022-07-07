@@ -1,15 +1,10 @@
 {
   "name": "@moiseshp/react-system-uicons",
   "description": "System UIcons to ReactJS",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "author": "moiseshp",
   "private": false,
   "license": "MIT",
-  "main": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "repository": "moiseshp/react-system-uicons",
   "scripts": {
     "start": "react-scripts start",
