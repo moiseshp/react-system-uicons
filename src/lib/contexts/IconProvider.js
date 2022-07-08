@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import theme from '../theme';
-import { mergeTheme } from '../utils/mergeTheme';
+import { mergeTheme } from '../theme/mergeTheme';
 
 const IconContext = createContext();
 

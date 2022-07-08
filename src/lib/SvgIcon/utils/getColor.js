@@ -1,4 +1,4 @@
-import { isObjectEmpty, removeWhitespace } from './helpers';
+import { isObjectEmpty, removeWhitespace } from '../../utils/helpers';
 
 /**
  * Return a color name customized or css color

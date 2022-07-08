@@ -1,4 +1,4 @@
-import { isObjectEmpty, buildClassName } from './helpers';
+import { isObjectEmpty, buildClassName } from '../../utils/helpers';
 
 /**
  * Return a class name built from props
