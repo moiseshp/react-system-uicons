@@ -1,7 +1,7 @@
 {
   "name": "@moiseshp/react-system-uicons",
   "description": "System UIcons to ReactJS",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "author": "moiseshp",
   "private": false,
   "license": "MIT",
@@ -17,7 +17,7 @@
     "prepare": "husky install",
     "pretty-quick": "pretty-quick",
     "clean": "rimraf lib",
-    "build": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir lib --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
+    "build": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir lib --ignore '**/__tests__, **/*.spec.js, **/*.test.js, **/*.stories.js, **/__snapshots__'",
     "prepublishOnly": "npm run build && cp -r lib/* .",
     "postpublish": "git clean -fd"
   },
