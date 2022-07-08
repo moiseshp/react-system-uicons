@@ -4,7 +4,7 @@ import { isObjectEmpty, removeWhitespace } from '../../utils/helpers';
  * Return a width and height
  * @param {object} props
  * @param {object} props.sizeOptions - color options
- * @param {string|number} props.size - number size or custom name size
+ * @param {string|number} props.size - number or custom name size
  * @return {object}
  */
 
@@ -14,9 +14,14 @@ export const getWidthAndHeight = (props) => {
   }
 
   const { sizeOptions, size } = props;
-  if (!size) return getBox(sizeOptions.medium);
-  if (sizeOptions[size]) return getBox(sizeOptions[size]);
-  if (typeof size === 'number') return getBox(size);
+
+  if (!sizeOptions || isObjectEmpty(sizeOptions)) {
+    throw Error(ERROR_MESSAGE.sizeOptions);
+  }
+
+  if (!size) return boxBuilder(sizeOptions.medium);
+  if (sizeOptions[size]) return boxBuilder(sizeOptions[size]);
+  if (typeof size === 'number') return boxBuilder(size);
 
   const sanitizeSize = removeWhitespace(size);
 
@@ -24,13 +29,14 @@ export const getWidthAndHeight = (props) => {
   const measureUnit = getMeasureUnit(sanitizeSize, number);
 
   if (typeof number === 'number' && measureUnit) {
-    return getBox(`${number}${measureUnit}`);
+    return boxBuilder(`${number}${measureUnit}`);
   }
-  return getBox(sizeOptions.medium);
+  return boxBuilder(sizeOptions.medium);
 };
 
 export const ERROR_MESSAGE = {
   props: 'props is undefined or is an empty object',
+  sizeOptions: 'sizeOptions is a value required',
 };
 
 const getNumberFromString = (value) => {
@@ -44,7 +50,7 @@ const getMeasureUnit = (value, number) => {
   return measureUnitsAllowed.includes(measureUnit) ? measureUnit : undefined;
 };
 
-const getBox = (sizing) => ({
+export const boxBuilder = (sizing) => ({
   width: sizing,
   height: sizing,
 });

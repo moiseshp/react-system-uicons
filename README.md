@@ -26,9 +26,7 @@ class Example extends Component {
 
 ## TODO
 
-- Add test to getWidthAndHeight()
 - Add test to SvgIcon
-- Add test to IconProvider
 - Create documentation
 
 ## Features
@@ -39,6 +37,7 @@ class Example extends Component {
 - You can tests the Icons through data-testid property
 - Add custom owner icon to project with the wrapper component SvgIcon
 - Easy integration with popular frameworks: Mui, Bootstrap, Chakra, Styled Components, etc.
+- Use object theme in all project for personalize yours components.
 
 ## License
 

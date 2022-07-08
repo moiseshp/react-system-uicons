@@ -1,4 +1,7 @@
+import { APP_NAME } from '../utils/constans';
+
 const theme = {
+  className: APP_NAME,
   size: {
     small: 17,
     medium: 21,
@@ -13,7 +16,6 @@ const theme = {
     info: '#0ff',
     success: '#f0f',
   },
-  className: 'SystemUIcons',
 };
 
 export default theme;
