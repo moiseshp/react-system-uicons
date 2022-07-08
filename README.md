@@ -27,6 +27,7 @@ class Example extends Component {
 ## TODO
 
 - Add test to getWidthAndHeight()
+- Add test to mergeTheme()
 - Add test to SvgIcon
 - Add test to IconProvider
 - Create documentation

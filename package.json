@@ -9,6 +9,7 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
+    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "lint": "eslint .",
