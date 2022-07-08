@@ -4,7 +4,6 @@ const theme = {
     medium: 21,
     large: 25,
   },
-  className: 'SystemUIcons',
   pallete: {
     default: 'inherit',
     primary: '#f00',
@@ -14,6 +13,7 @@ const theme = {
     info: '#0ff',
     success: '#f0f',
   },
+  className: 'SystemUIcons',
 };
 
 export default theme;

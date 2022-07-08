@@ -16,7 +16,6 @@ npm install --save react-system-uicons
 import React, { Component } from 'react';
 
 import MyComponent from 'react-system-uicons';
-import 'react-system-uicons/dist/index.css';
 
 class Example extends Component {
   render() {
@@ -25,22 +24,22 @@ class Example extends Component {
 }
 ```
 
-## License
+## TODO
 
-## Links
-
-https://fathomtech.io/blog/create-a-react-component-library-using-create-react-app/
-https://medium.com/hackernoon/creating-a-library-of-react-components-using-create-react-app-without-ejecting-d182df690c6b
-
-##TODO
-
-- Integration with other frameworks: Material UI, Bootstrap, Chakra, Styled Components, etc.
+- Add test to getWidthAndHeight()
+- Add test to SvgIcon
+- Add test to IconProvider
+- Create documentation
 
 ## Features
 
-- Permite exportar un Provider para controlar configuración personalizada del Icon
-- Type Props
-- Tests
-- Create your custom icon with wrapper SvgIcon
+- Use icons with zero configuration
+- Can set css styles o modules css through class names of component
+- You need advance feature use icons with custom theme using SystemUIconsProvider
+- You can tests the Icons through data-testid property
+- Add custom owner icon to project with the wrapper component SvgIcon
+- Easy integration with popular frameworks: Mui, Bootstrap, Chakra, Styled Components, etc.
 
-  MIT © [moiseshp](https://github.com/moiseshp)
+## License
+
+MIT © [moiseshp](https://github.com/moiseshp)

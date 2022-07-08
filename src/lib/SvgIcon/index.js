@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIconTheme } from './contexts/IconProvider';
-import { getWidthAndHeight } from './utils/getWidthAndHeight';
-import { getColor } from './utils/getColor';
-import { getClassName } from './utils/getClassName';
+import { useIconTheme } from '../contexts/IconProvider';
+import { getWidthAndHeight } from '../utils/getWidthAndHeight';
+import { getColor } from '../utils/getColor';
+import { getClassName } from '../utils/getClassName';
 
 const defaultProps = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -13,14 +13,13 @@ const defaultProps = {
 };
 
 const SvgIcon = ({ children, id, color, size }) => {
-  const theme = useIconTheme();
-  const props = { color, size, theme };
+  const { className, pallete, size: sizeOptions } = useIconTheme();
   return (
     <svg
-      className={getClassName(props)}
-      color={getColor(props)}
       data-testid={id || children.props.id}
-      {...getWidthAndHeight(props)}
+      className={getClassName({ className, color, size })}
+      color={getColor({ pallete, color })}
+      {...getWidthAndHeight({ sizeOptions, size })}
       {...defaultProps}
     >
       {children}

@@ -1,28 +1,50 @@
+import { isObjectEmpty, removeWhitespace } from './helpers';
+
+/**
+ * Return a width and height
+ * @param {object} props
+ * @param {object} props.sizeOptions - color options
+ * @param {string|number} props.size - number size or custom name size
+ * @return {object}
+ */
+
+export const getWidthAndHeight = (props) => {
+  if (!props || isObjectEmpty(props)) {
+    throw Error(ERROR_MESSAGE.props);
+  }
+
+  const { sizeOptions, size } = props;
+  if (!size) return getBox(sizeOptions.medium);
+  if (sizeOptions[size]) return getBox(sizeOptions[size]);
+  if (typeof size === 'number') return getBox(size);
+
+  const sanitizeSize = removeWhitespace(size);
+
+  const number = getNumberFromString(sanitizeSize);
+  const measureUnit = getMeasureUnit(sanitizeSize, number);
+
+  if (typeof number === 'number' && measureUnit) {
+    return getBox(`${number}${measureUnit}`);
+  }
+  return getBox(sizeOptions.medium);
+};
+
+export const ERROR_MESSAGE = {
+  props: 'props is undefined or is an empty object',
+};
+
 const getNumberFromString = (value) => {
-  const number = parseInt(value);
-  if (typeof number === 'number' && number >= 0) return Math.abs(number);
-  throw Error(`${value} is not contained a number equal to or greather than zero`);
+  const number = parseFloat(value);
+  return typeof number === 'number' && number >= 0 ? Math.abs(number) : undefined;
 };
 
 const getMeasureUnit = (value, number) => {
   const measureUnitsAllowed = ['%', 'px', 'rem', 'em'];
   const measureUnit = value.replace(number, '');
-  if (!measureUnitsAllowed.includes(measureUnit)) {
-    throw Error(`${value} is not contained a measure unit valid`);
-  }
-  return measureUnit;
+  return measureUnitsAllowed.includes(measureUnit) ? measureUnit : undefined;
 };
 
 const getBox = (sizing) => ({
   width: sizing,
   height: sizing,
 });
-
-export const getWidthAndHeight = ({ size, theme }) => {
-  if (!size) return getBox(theme.size.medium);
-  if (theme.size[size]) return getBox(theme.size[size]);
-  if (typeof size === 'number') return getBox(size);
-  const number = getNumberFromString(size);
-  const measureUnit = getMeasureUnit(size, number);
-  return getBox(`${number}${measureUnit}`);
-};
