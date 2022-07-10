@@ -5,6 +5,7 @@ import SystemUIconsProvider, { useIconTheme } from '../../contexts/IconProvider'
 import { getClassName } from '../utils/getClassName';
 import { getColor } from '../utils/getColor';
 import { getWidthAndHeight } from '../utils/getWidthAndHeight';
+import defaultTheme from '../../theme';
 
 describe('<SvgIcon />', () => {
   it('SvgIcon must be a native svg component and render the content passed as children', () => {
@@ -20,7 +21,31 @@ describe('<SvgIcon />', () => {
     expect(svg.querySelector('path')).toBeInTheDocument();
   });
 
-  it('Pass props to a CustomIcon and render them as attributes on the svg component', () => {
+  it('Pass props to a CustomIcon [without provider] and render them as attributes on the svg component', () => {
+    const props = {
+      id: 'ExampleIcon',
+      className: 'CustomClassName',
+      color: '#F0F',
+      size: 40,
+    };
+
+    const ExampleIcon = (props) => (
+      <SvgIcon {...props}>
+        <path d="m.5 5.5 3 3 8.028-8" />
+      </SvgIcon>
+    );
+    render(<ExampleIcon {...props} />);
+
+    const svg = screen.getByTestId(props.id);
+    const { pallete, size: sizeOptions } = defaultTheme;
+    expect(svg).toHaveClass(getClassName(props));
+    expect(svg).toHaveAttribute('color', getColor({ pallete, color: props.color }));
+    const box = getWidthAndHeight({ sizeOptions, size: props.size });
+    expect(svg).toHaveAttribute('width', String(box.width));
+    expect(svg).toHaveAttribute('height', String(box.height));
+  });
+
+  it('Pass props to a CustomIcon [with provider] and render them as attributes on the svg component', () => {
     const props = {
       id: 'ExampleIcon',
       className: 'CustomClassName',

@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-import theme from '../theme';
 import { mergeTheme } from '../theme/mergeTheme';
 
 const IconContext = createContext();
 
 export const useIconTheme = () => {
-  return useContext(IconContext) || theme;
+  return useContext(IconContext);
 };
 
 const IconProvider = ({ children, theme }) => {

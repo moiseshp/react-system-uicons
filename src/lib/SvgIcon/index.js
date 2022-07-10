@@ -4,6 +4,7 @@ import { useIconTheme } from '../contexts/IconProvider';
 import { getWidthAndHeight } from './utils/getWidthAndHeight';
 import { getColor } from './utils/getColor';
 import { getClassName } from './utils/getClassName';
+import defaultTheme from '../theme';
 
 const defaultProps = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -13,7 +14,8 @@ const defaultProps = {
 };
 
 const SvgIcon = ({ children, id, color, size, className: customClassName }) => {
-  const { className: classNameOfTheTheme, pallete, size: sizeOptions } = useIconTheme();
+  const theme = useIconTheme() || defaultTheme;
+  const { className: classNameOfTheTheme, pallete, size: sizeOptions } = theme;
   const testId = id || children.props?.id || className;
   const className = customClassName || classNameOfTheTheme;
   return (

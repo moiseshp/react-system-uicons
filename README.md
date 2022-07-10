@@ -24,10 +24,6 @@ class Example extends Component {
 }
 ```
 
-## TODO
-
-- Create documentation
-
 ## Features
 
 - Use icons with zero configuration
@@ -40,10 +36,9 @@ class Example extends Component {
 
 ## Benchmarks
 
-- https://icons.getbootstrap.com/
 - https://chakra-ui.com/docs/components/icon#using-chakra-ui-icons
+- https://icons.getbootstrap.com/
 - https://mui.com/material-ui/icons/#main-content
-- https://fontawesome.com/icons
 - https://fontawesome.com/v5/docs/web/use-with/react
 - https://vuetifyjs.com/en/components/icons/
 - https://react-icons.github.io/react-icons/
