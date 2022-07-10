@@ -1,11 +1,10 @@
 import React from 'react';
 import SvgIcon from './SvgIcon';
 
-const Create = ({ ...rest }) => {
+const Create = (props) => {
   return (
-    <SvgIcon {...rest}>
+    <SvgIcon id="CreateIcon" {...props}>
       <g
-        id="CreateIcon"
         fill="none"
         fillRule="evenodd"
         stroke="currentColor"

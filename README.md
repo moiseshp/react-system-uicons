@@ -26,7 +26,6 @@ class Example extends Component {
 
 ## TODO
 
-- Add test to SvgIcon
 - Create documentation
 
 ## Features

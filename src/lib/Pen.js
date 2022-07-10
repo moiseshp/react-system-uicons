@@ -1,11 +1,10 @@
 import React from 'react';
 import SvgIcon from './SvgIcon';
 
-const Pen = ({ ...rest }) => {
+const Pen = (props) => {
   return (
-    <SvgIcon {...rest}>
+    <SvgIcon id="PenIcon" {...props}>
       <g
-        id="PenIcon"
         fill="none"
         fillRule="evenodd"
         stroke="currentColor"

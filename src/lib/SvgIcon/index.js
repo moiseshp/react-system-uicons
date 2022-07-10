@@ -12,11 +12,13 @@ const defaultProps = {
   'aria-hidden': true,
 };
 
-const SvgIcon = ({ children, id, color, size }) => {
-  const { className, pallete, size: sizeOptions } = useIconTheme();
+const SvgIcon = ({ children, id, color, size, className: customClassName }) => {
+  const { className: classNameOfTheTheme, pallete, size: sizeOptions } = useIconTheme();
+  const testId = id || children.props?.id || className;
+  const className = customClassName || classNameOfTheTheme;
   return (
     <svg
-      data-testid={id || children.props.id}
+      data-testid={testId}
       className={getClassName({ className, color, size })}
       color={getColor({ pallete, color })}
       {...getWidthAndHeight({ sizeOptions, size })}
@@ -26,8 +28,6 @@ const SvgIcon = ({ children, id, color, size }) => {
     </svg>
   );
 };
-
-SvgIcon.defaultProps = {};
 
 SvgIcon.propTypes = {
   color: PropTypes.string,
