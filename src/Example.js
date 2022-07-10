@@ -3,7 +3,6 @@ import CreateIcon from './lib/Create';
 import WriteIcon from './lib/Write';
 // import Pen from './dist/Pen';
 // import SystemUIconsProvider from './dist';
-import './styles.css';
 
 function App() {
   return (
