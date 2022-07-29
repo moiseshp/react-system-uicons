@@ -29,12 +29,6 @@ class Example extends Component {
 }
 ```
 
-## ToDo
-
-- Add SVG Icon role="img"
-- Add Accessibility. Example: aria-label="Tools"
-- Create Icon a partir de: https://chakra-ui.com/docs/components/icon/usage#using-a-third-party-icon-library
-
 ## Features
 
 - Use icons with zero configuration
@@ -44,6 +38,7 @@ class Example extends Component {
 - Add custom owner icon to project with the wrapper component SvgIcon (https://chakra-ui.com/docs/components/icon#creating-your-custom-icons)
 - Easy integration with popular frameworks: Mui, Bootstrap, Chakra, Styled Components, etc.
 - Use object theme in all project for personalize yours components.
+- Add Accessibility. Example: aria-label="Tools"
 
 ## Benchmarks
 

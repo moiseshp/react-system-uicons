@@ -3,7 +3,7 @@ import SvgIcon from './SvgIcon';
 
 const Create = (props) => {
   return (
-    <SvgIcon id="CreateIcon" {...props}>
+    <SvgIcon id="CreateIcon" ariaLabel="create icon" {...props}>
       <g
         fill="none"
         fillRule="evenodd"
