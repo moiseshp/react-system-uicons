@@ -3,18 +3,18 @@ import { APP_NAME } from '../utils/constans';
 const theme = {
   className: APP_NAME,
   size: {
-    small: 17,
+    small: 16,
     medium: 21,
-    large: 25,
+    large: 26,
   },
   pallete: {
     default: 'inherit',
-    primary: '#f00',
-    secondary: '#0f0',
-    error: '#00f',
-    warning: '#ff0',
-    info: '#0ff',
-    success: '#f0f',
+    primary: '#1976d2',
+    secondary: '#9c27b0',
+    error: '#d32f2f',
+    warning: '#ed6c02',
+    info: '#0288d1',
+    success: '#2e7d32',
   },
 };
 
